@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mr Mcobothi BA/Developer</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="https://fontawesome.com/icons/spinner?f=classic&s=solid&an=spin&sz=lg" crossorigin="anonymous" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<style>
+    /* &#9776; humburger nav icon*/
+
+/* sticky header*/
+.top-container {
+  /* background-color: #f1f1f1; */
+  margin-top: -20%;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background-image: url('content/background-crop.png'); 
+  /* background: url('content/prog-images/Screenshot\ 2023-11-18\ 145955.png') center/cover no-repeat;  */
+  /* color: #e71a1a; */
+  z-index: 1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+/*curtain*/
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-content a:hover {
+  text-decoration: underline;
+  
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+  
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+<style>
+    header {
+    position: relative;
+    height: 450px; /* Adjust the height as needed */
+    background: url('content/prog-images/Screenshot\ 2023-11-18\ 145955.png') center/cover no-repeat;
+    text-align: center;
+    color: #fff; /* Text color on top of the background image */
+}
+    body{
+        background: url('content/background-crop.png') center/cover no-repeat;
+        padding-bottom: 5%;
+        font-family:monospace;
+        color: white;
+        font-size:x-large;
+        text-align: justify;
+        /* hyphens: auto; */
+       /* opacity: 50% ;*/
+    }
+    h1,h2,h3,h4,h5,h6{
+       font-weight: bolder;
+       font-size:x-large;
+    }
+.floating-image {
+    position: absolute;
+    top: 30%; /* Adjust the position as needed */
+    left: 15%; /* Adjust the position as needed */
+    transform: translate(-20%, -20%);
+    max-width: 50%; /* Ensure the image doesn't exceed the container width */
+    height: 80%;
+}
+
+.middle-border{
+    text-decoration: underline 10px orangered;
+
+}
+
+/* .margin-border{
+    text-decoration: underline 10px blue;
+
+}*/
+
+.Developer-skills{
+    list-style:none;
+}
+
+.BA-skills{
+    list-style:none;
+}
+
+/*SMALL SCREENS*/
+
+@media only screen and (max-width: 480px) {
+.floating-image {
+    position: absolute;
+    top: 80%; /* Adjust the position as needed */
+    left: 35%; /* Adjust the position as needed */
+    transform: translate(-20%, -20%);
+    max-width: 50%; /* Ensure the image doesn't exceed the container width */
+    height: 45%;
+}
+
+
+/* .nav-icon{
+position: absolute;
+top: 10%;
+left: 90%;
+transform: translate(-50%, -50%);
+} */
+
+.my-name{
+padding-top: 5%;
+}
+
+.about{
+padding-top: 0%;
+}
+
+.title-png{align-items: center;
+margin-left: 10%;
+margin-bottom: -20%;
+}
+.content-margins{
+padding-left: 2%;
+padding-right: 2%;
+/* opacity: 80% ; */
+}
+
+.opacity-content{
+opacity: 80% ;
+}
+
+.left-icon{
+position: absolute;
+    top: 90%; 
+    left: 5%;
+    transform: translate(-20%, -20%);
+}
+
+.right-icon{
+position: absolute;
+    top: 90%; 
+    left: 85%;
+    transform: translate(-20%, -20%);
+}
+
+ .mobile-nav ul{
+    /* background-image: url('content/background-crop.png'); */
+    width:300%;
+    background-size: cover;
+    align-items: center;
+} 
+
+/* .mobile-nav{
+position: absolute;
+top: 10%;
+left: 70%;
+}
+
+.nav-icon{
+position: absolute;
+top: 7%;
+left: 30%;
+} */
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+.nav-icon{
+    visibility:hidden;
+}
+}
+/* For tablets: */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+/* For iPads: */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+
+.mobile-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Display items vertically */
+    background-color: transparent;
+    padding: 10px;
+    /* color: white; */
+   background-size: cover;
+   position: absolute;
+   left: 24%;
+   top:-1%;
+}
+
+.nav-icon {
+    /* height: 50px;
+    width: 50px; */
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide the links by default */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* #download-pdf {
+background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+} */
+</style>
+<style>
+    .nav-icon {
+              left: 80%;
+               position: fixed;
+               top: 2%;
+               background-color: transparent;
+               padding: 10px;
+               text-align: center;
+           }
+   
+   </style>
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html#home" onclick="closeNav()">Home</a>
+            <a href="index.html#about" onclick="closeNav()">About</a>
+            <a href="index.html#experience" onclick="closeNav()">Experience</a>
+            <a href="index.html#skills" onclick="closeNav()">Skills</a>
+            <a href="index.html#qualification" onclick="closeNav()">Studies</a>
+            <a href="index.html#my-projects" onclick="closeNav()">Projects</a>
+        </div>
+      </div>
+
+<div class="header" id="myHeader">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="content/navigation-bar-icon-17.jpg" style="height: 50px;width: 50px;" alt="inner-image"></span>
+</div>
+<div class="top-container">
+    <header class="header-holder">
+        <section id="home" class="home">
+         <div class="w3-circle inner-image " id="floating-image">
+             <img class="floating-image" id="floating-image" src="content/my-images/cv profile.jpg" alt="inner-image" >
+        </div>
+        <!-- <div class="left-icon">
+             <img src="content/sticker-png-magnifying-glass-logo-analytics-data-analysis-big-data-it-operations-analytics-business-analytics-big-data-analytics-data-warehouse-removebg-preview.png"  style="height: 60px;width: 60px;">
+        </div>
+        <div class="right-icon">
+             <img src="content/developer-icon-removebg-preview.png" style="height: 60px;width: 60px;">
+        </div> -->
+      
+    
+        </section>
+     </header>
+</div>
+
+
+
+<div class="content">
+    <section id="home-2" class="home-2">
+        <div class="description">
+            <div class="my-name">
+                <div class="title-png">
+                    <img src="content/Bhekithemba Mcobothi__2_-removebg-preview.png" style="width: 300px;height: 300px; ">
+                </div>
+            </div>
+           
+        </div>
+       </section>
+
+       <section id="about" class="about">
+        <div class="title-png">
+            <img src="content/About-removebg-preview.png" style="width: 300px;height: 300px;">
+         </div>
+
+       <div class="content-margins">
+        <div class="summary">
+            <div class="margin-border">
+                <h4><i class="fa fa-address-card" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Summary</h4>
+            </div>
+            <div class="opacity-content">
+                 <p>
+                Highly motivated and career-driven 3rd-year (Final) student pursuing a Diploma in Information and Communications 
+                Technology at Durban University of Technology. My interests are programming and defining solutions.I Seek for an 
+                entry-level position as a Business Analyst, Systems Analyst, SQL Developer, Database Administrator, or a role in Software 
+                Development to leverage my skills and contribute to a dynamic team.
+            </p>
+            </div>
+            
+        </div>
+       </div>
+
+        <div class="expertise">
+            <div class="title-png">
+                <img src="content/Expertise-removebg-preview.png" style="width: 300px;height: 300px;">
+             </div>
+             <div class="content-margins">
+                 <div class="BA-Expertise">
+                <div class="margin-border">
+                     <h4><i class="fa fa-database" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Business Analysis:</h4>
+                </div>
+                <div class="opacity-content">
+                 <p>
+                    From analysing current business processes and strategies to improve it ICT processes and communications, defining user requirements, 
+                    using tools for internal and external Analysis to determine gap analysis, and from data analysis I can make the best solution to current problems
+                     and risk management. Using SQL to manipulate data and quickly retrieve records or results from database.
+                </p>
+                </div>
+               
+            </div>
+             </div>
+           
+            <div class="content-margins">
+                 <div class="Developer-Expertise">
+                <div class="margin-border">
+                     <h4><i class="fa fa-file-code-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Software Development:</h4>
+                </div>
+                <div class="opacity-content">
+                 <p>
+                I have strong knowledge, deep understanding and experience of C#, I learned C# on Applications Development module, due to excitement and love for creative
+                programming I became a self employed tutor for students, tutoring MVC applications, Windows forms and Basic C# from Console Apps. I continued to learn HTML,
+                 CSS and JavaScript for front end development.
+               </p>
+                </div>
+              
+            </div>
+            </div>
+           
+        </div>
+
+       </section>
+
+      <section id="experience" class="experience">
+        <div class="experience">
+            <div class="title-png">
+                <img src="content/Work_Experience-removebg-preview.png" style="width: 300px;height: 300px;">
+             </div><br/>
+             <div class="content-margins">
+                 <div class="margin-border">
+                 <h4><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;Coas Solutions Pty Ltd: Software Developer Volunteer</h4>    
+            </div>
+            <div class="opacity-content">
+                 <h5>
+                Aug 2023 – Present
+            </h5>
+            <p>
+                <h5>- Web Development:</h5>Using HTML, CSS, and JavaScript, ensuring a seamless and user-friendly
+                interface and responsiveness across all device sizes.
+            </p>
+            <p>
+                <h5>- E-Commerce Development:</h5> Executed the design and implementation of E-Commerce web pages using
+                WordPress, optimizing the user shopping experience.
+            </p>
+            <p>
+                <h5>- Tool Proficiency:</h5> Utilized Visual Studio Code, Visual Studio.
+            </p>
+            <p>
+                <h5>- Agile Project Management:</h5> Oversee projects on Azure DevOps.
+            </p>
+            </div>
+           
+        
+             </div>
+        </div>
+      </section>
+
+       <section id="skills" class="skills">
+        <div class="skills">
+            <div class="title-png">
+                <img src="content/Skills-removebg-preview.png" style="width: 300px;height: 300px;">
+             </div>
+             <div class="content-margins">
+                <div class="Developer-skills">
+                  <div class="margin-border">
+                   <h4><i class="fa fa-file-code-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Software Development:</h4>
+                  </div>
+                  <div class="opacity-content">
+                <h5>
+                  <li>- .NET Framework</li> 
+                  <li>- C# </li>
+                  <li>- ASP.NET MVC </li>
+                  <li>- HTML & CSS </li>
+                  <li>- JavaScript </li>
+                  <li>- MS SQL Server</li>
+                  <li>- Canvas</li>
+                 </h5>
+                  </div>
+                 
+              </div>
+           </div><br/> 
+             <div class="content-margins">
+                 <div class="BA-skills">
+                    <div class="margin-border">
+                      <h4><i class="fa fa-database" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Business Analysis:</h4>
+                    </div>
+                    <div class="opacity-content">
+                            <h5>
+                              <li>- Power BI</li> 
+                              <li>- Tableau </li>
+                              <li>- Excel </li>
+                              <li>- SAP </li>
+                              <li>- Visio </li>
+                              <li>- FluidUI</li>
+                             </h5>
+                 <!--Proficient in creating interactive reports and dashboards.-->
+                  <!--Experienced in data visualization and analytics.-->
+                  <!-- Advanced skills in data analysis, formulas, and pivot tables.-->
+                    <!--Familiarity with SAP systems for [specific functions or modules].-->
+                   <!--Skilled in creating flowcharts, diagrams, and visual representations.-->
+                    <!--Proficient in creating wireframes and visual prototypes.-->
+
+                    </div>
+                   
+                  <!-- <div class="clients mt-100">
+                        <div class="container">
+                
+                            <div class="owl-carousel clients-carousel">
+                
+                                <img style="padding-top: 45%;" src="images/icons/1200px-Tableau_Logo.png" alt="Client Logo">
+                                <img style="padding-top: 23%;" src="images/icons/Power-BI-Symbol.png" alt="Client Logo">
+                                <img src="images/icons/microsoft-visio-icon-logo-symbol-free-png.webp" alt="Client Logo">
+                                <img src="images/icons/microsoft-excel-icon-logo-symbol-free-png.png" alt="Client Logo">
+                                <img style="background-color: white; padding-top: 15%;" src="images/icons/microsoft-sql-server-logo-database-microsoft-corporation-sql-logo.jpg" alt="Client Logo">
+                
+                
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+             </div> 
+        </div>
+       </section>
+
+       <section id="qualification" class="qualification">
+            <div class="studies">
+                <div class="title-png">
+                              <img src="content/Studies-removebg-preview.png" style="width: 300px;height: 300px;">
+                </div>
+                <div class="content-margins">
+                    <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;Tertiary Diploma in Information and Communication Technology</h5>
+                    <div class="opacity-content">
+                 <h5>- Durban University of Technology (DUT)</h5>
+                    <p>Durban, KwaZulu-Natal, South Africa</p>
+                    <p>February 2021 - Currently</p>
+                    <p>Completed</p>
+                    <p>Years take: 3</p>
+                    </div>
+                   
+                </div>
+            </div>
+       </section>
+
+       <section id="my-projects" class="my-projects"> 
+        <div class="projects">
+            <div class="title-png">
+                <img src="content/Projects-removebg-preview.png" style="width: 300px;height: 300px;">
+             </div>
+             <div class="content-margins">
+                <div class="projects-list w3-xxlarge w3-spin fa fa-spinner">
+
+                </div>
+               <p>no projects to display yet</p>
+             </div>
+             </div>
+        </div>
+       </section>
+</div>
+
+<script>
+    // sticky
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+//curtain
+
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+</script>
+
+</body>
+</html>
